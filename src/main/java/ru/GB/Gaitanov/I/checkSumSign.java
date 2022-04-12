@@ -4,6 +4,10 @@ public class checkSumSign {
 
     public static void main(String[] args) {
         CheckSumSign();
+    }
+
+    public static void CheckSumSign() {
+        {
 
         int a = -10;
         int b = 5;
@@ -15,8 +19,5 @@ public class checkSumSign {
             System.out.println("Сумма отрицательная");
         }
     }
-
-
-    private static void CheckSumSign() {
     }
     }
