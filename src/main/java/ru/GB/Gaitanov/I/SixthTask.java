@@ -45,18 +45,18 @@ public class SixthTask {
 
                 System.out.println("Желтый");
             }
-            if (value > 100)
-                System.out.println("Зеленый");
+            if (value > 100) System.out.println("Зеленый");
 
         }
     }
-        public static void printThreeWords() {
-            {
-                System.out.println("Orange");
-                System.out.println("Banana");
-                System.out.println("Apple");
-            }
+
+    public static void printThreeWords() {
+        {
+            System.out.println("Orange");
+            System.out.println("Banana");
+            System.out.println("Apple");
         }
-        }
+    }
+}
 
 
