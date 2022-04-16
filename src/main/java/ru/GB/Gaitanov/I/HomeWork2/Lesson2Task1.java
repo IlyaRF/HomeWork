@@ -5,7 +5,6 @@ public class Lesson2Task1 {
 
         System.out.println(within10and20(10, 11));
         ;
-
     }
 
     public static boolean within10and20(int a, int b) {
