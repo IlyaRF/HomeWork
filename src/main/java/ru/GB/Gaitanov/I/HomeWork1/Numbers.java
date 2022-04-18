@@ -1,4 +1,4 @@
-package ru.GB.Gaitanov.I;
+package ru.GB.Gaitanov.I.HomeWork1;
 
 public class Numbers {
     public static void main(String[] args) {
@@ -6,7 +6,7 @@ public class Numbers {
     }
     public static void Numbers() {
 
-        int a = 23;
+        int a =  23;
         int b = 15;
 
         if (a >= b) {

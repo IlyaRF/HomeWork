@@ -1,4 +1,4 @@
-package ru.GB.Gaitanov.I;
+package ru.GB.Gaitanov.I.HomeWork1;
 
 public class SixthTask {
     public static void main(String[] args) {
