@@ -4,11 +4,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Task1 {
-
     public static int SIZE = 3;
     public static int DOTS_TO_WIN = 3;
     public static final char DOT_EMPTY = '•';
-    public static final char[][] DOT_X = 'X';
+    public static final char DOT_X = 'X';
     public static final char DOT_O = 'O';
     public static char[][] map;
     public static Scanner sc = new Scanner(System.in);
@@ -30,7 +29,7 @@ public class Task1 {
             }
             aiTurn();
             printMap();
-            if (checkWin(String)) {
+            if (checkWin(DOT_O)) {
                 System.out.println("Победил Искуственный Интеллект");
                 break;
             }
@@ -42,46 +41,24 @@ public class Task1 {
         System.out.println("Игра закончена");
     }
 
-    public static boolean checkWin(char[][] desc)
-    {
-        char winner = DOT_EMPTY;
-        try {
-            for (int i = 0; i < SIZE; i++) {
-                check(desc, 1, 0, 0, i); //columns
-            }
-            for (int i = 0; i < SIZE; i++) {
-                check(desc, 0, i, 1, 0); //rows
-            }
-            check(desc, 1, 0, 1, 0); //first diagonal
-            check(desc, -1, SIZE - 1, 1, 0); //second diagonal
-
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return (checkWin(DOT_X);
-    }
-    public static void check(char[][] desc, int xCoef, int xShift, int yCoef, int yShift)
-    {
-        char savedSymbol = DOT_EMPTY;
-        int savedSymbolCount = 0;
-        for (int i = 0; i < SIZE; i++)
-        {
-            int x = i * xCoef + xShift;
-            int y = i * yCoef + yShift;
-            char symbol = desc[x][y];
-            if (symbol == savedSymbol)
-            {
-                savedSymbolCount++;
-            }
-            else
-            {
-                savedSymbol = symbol;
-                savedSymbolCount = 1;
-            }
-            if (symbol != DOT_EMPTY && savedSymbolCount == DOTS_TO_WIN)
-
-        }
+    public static boolean checkWin(char symb) {
+        if (map[0][0] == symb && map[0][1] == symb && map[0][2] == symb) return
+                true;
+        if (map[1][0] == symb && map[1][1] == symb && map[1][2] == symb) return
+                true;
+        if (map[2][0] == symb && map[2][1] == symb && map[2][2] == symb) return
+                true;
+        if (map[0][0] == symb && map[1][0] == symb && map[2][0] == symb) return
+                true;
+        if (map[0][1] == symb && map[1][1] == symb && map[2][1] == symb) return
+                true;
+        if (map[0][2] == symb && map[1][2] == symb && map[2][2] == symb) return
+                true;
+        if (map[0][0] == symb && map[1][1] == symb && map[2][2] == symb) return
+                true;
+        if (map[2][0] == symb && map[1][1] == symb && map[0][2] == symb) return
+                true;
+        return false;
     }
 
     public static boolean isMapFull() {
@@ -110,7 +87,7 @@ public class Task1 {
             System.out.println("Введите координаты в формате X Y");
             x = sc.nextInt() - 1;
             y = sc.nextInt() - 1;
-        } while (!isCellValid(x, y));
+        } while (!isCellValid(x, y)); // while(isCellValid(x, y) == false)
         map[y][x] = DOT_X;
     }
 
@@ -144,7 +121,3 @@ public class Task1 {
         System.out.println();
     }
 }
-
-
-
-
