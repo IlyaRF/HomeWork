@@ -17,7 +17,7 @@ public class Task1 {
         initMap();
         printMap();
         while (true) {
-            humanTurn();
+            humanTurn(map[1][1]);
             printMap();
             if (checkWin(DOT_X)) {
                 System.out.println("Победил человек");
@@ -63,17 +63,18 @@ public class Task1 {
     }
 
     public static void aiTurn() {
-        int x, y;
+        int x = 0, y;
         do {
-            x = rand.nextInt(SIZE);
-            y = rand.nextInt(SIZE);
+            if (humanTurn(map [1][1]))
+            x = 2;
+            y = 2;
         } while (!isCellValid(x, y));
         System.out.println("Компьютер походил в точку " + (x + 1) + " " + (y +
                 1));
         map[y][x] = DOT_O;
     }
 
-    public static void humanTurn() {
+    public static boolean humanTurn(char c) {
         int x, y;
         do {
             System.out.println("Введите координаты в формате X Y");
@@ -81,6 +82,7 @@ public class Task1 {
             y = sc.nextInt() - 1;
         } while (!isCellValid(x, y)); // while(isCellValid(x, y) == false)
         map[y][x] = DOT_X;
+        return false;
     }
 
     public static boolean isCellValid(int x, int y) {
