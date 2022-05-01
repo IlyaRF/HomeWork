@@ -4,15 +4,30 @@ public class Task1 {
 
     public static void main(String[] args) {
 
-        final Employee emp1 = new Employee("Иванов Иван Иванович", "директор", "dir@mail", 880000005, 300000, 20);
-        final Employee emp2 = new Employee("Иванов Иван Иванович", "директор", 880000005, 300000, 35);
-        final Employee emp3 = new Employee("Иванов Иван Иванович", "директор", "dir@mail", 880000005, 50000);
-        final Employee emp4 = new Employee("Иванов Иван Иванович", "директор", "dir@mail", 880000005, 300000, 20);
-        final Employee emp5 = new Employee("Иванов Иван Иванович", "директор", "dir@mail", 880000005, 300000, 20);
+        Employee[] emp = new Employee[5];
+        emp[0] = new Employee("Иванов Иван Иванович", "директор", "dir@mail", (int) 88005353535L, 300000, 41);
+        emp[1] = new Employee("Смирнов Константин Петрович", "главный бухгалтер", "glavbuh@mail", (int) 88000000524L, 150000, 35);
+        emp[2] = new Employee("Голубева Кристина Федоровна", "бухгалтер", "buh@mail", (int) 88002100051L, 80000, 62);
+        emp[3] = new Employee("Иванов Семен Семенович", "Руководитель отдела", "ruk@mail", (int) 880004830005L, 100000, 29);
+        emp[4] = new Employee("Иванов Аркадий Григорьевич", "работник", "rab@mail", (int) 880127000005L, 30000, 40);
 
 
+
+      /*  public static int arr(int len, int initialValue) {
+
+            int arr[] = new int[len];
+            for (int i = 1; i < arr.length; i++) {
+                arr[i] = initialValue;
+        */
+
+            for (int i = 0; i < emp.length; i++) {
+                if (emp[i].getAge() >= 40)
+                    System.out.println(emp[i].getNameSurnamePatronymic() + " старше 40 лет");
+        }
     }
 }
+
+
 
 
     /*    emp1.setNameSurnamePatronymic("Иванов Иван Иванович");

@@ -80,7 +80,8 @@ public class Employee {
     public void setAge(int age) {
         if (age >= 0 && age < 250)
             this.age = age;
-
+        else
+        System.out.println("Некорректный возраст");
     }
 
 
