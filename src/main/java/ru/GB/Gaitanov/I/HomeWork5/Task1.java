@@ -23,7 +23,8 @@ public class Task1 {
             for (int i = 0; i < emp.length; i++) {
                 if (emp[i].getAge() >= 40)
                     System.out.println(emp[i].getNameSurnamePatronymic() + " старше 40 лет");
-        }
+
+            }
     }
 }
 

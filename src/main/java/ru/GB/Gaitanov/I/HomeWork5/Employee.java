@@ -83,12 +83,6 @@ public class Employee {
         else
         System.out.println("Некорректный возраст");
     }
-
-
-
-   /* public void info() {
-        System.out.println("Ф.И.О.: " + nameSurnamePatronymic + "; Должность: " + position + ";Электронная почта: " + email + "; Телефонный номер: " + phoneNumber + "; " +
-                "; Зарплата: " + salary + "; Возраст: " + age);*/
 }
 
 
