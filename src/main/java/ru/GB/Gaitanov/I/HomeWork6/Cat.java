@@ -6,7 +6,7 @@ public class Cat extends Animal {
     }
     @Override
     void run(int length) {
-        if ((length >= 0) && (length <= runLength)) System.out.println("run: true");
+        if ((length >= 0) && (length <= getRunLength())) System.out.println("run: true");
         else System.out.println("run: false");
     }
 

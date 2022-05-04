@@ -7,7 +7,7 @@ public abstract class Animal {
 
     private String name;
     private int swimLength;
-    private int runLenght;
+    private int runLength;
     private static int sum;
 
     abstract void run(int length);
@@ -16,7 +16,7 @@ public abstract class Animal {
     public Animal(String name, int swim, int run) {
         this.name = name;
         this.swimLength = swim;
-        this.runLenght = run;
+        this.runLength = run;
 
 
     }
@@ -41,12 +41,12 @@ public abstract class Animal {
         this.swimLength = swimLength;
 
     }
-    public int getRunLenght() {
+    public int getRunLength() {
         return swimLength;
     }
 
-    public void setRunLenght(int runLenght) {
-        this.runLenght = runLenght;
+    public void setRunLength(int runLength) {
+        this.runLength = runLength;
 
     }
     public void setName(String name) {

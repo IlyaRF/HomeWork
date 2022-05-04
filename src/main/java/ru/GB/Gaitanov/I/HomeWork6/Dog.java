@@ -5,8 +5,16 @@ public class Dog extends Animal {
         super(name, swim, run);
     }
 
-
-    public void run() {
-        System.out.println(2);
-}
+    @Override
+    void run(int length) {
+        if ((length >= 0) && (length <= getRunLength())) System.out.println("run: true");
     }
+
+    @Override
+    void swim(int length) {
+        if ((length >= 0) && (length <= getSwimLength())) System.out.println("swim: true");
+        else System.out.println("swim: false");
+    }
+
+}
+
