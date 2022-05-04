@@ -6,17 +6,15 @@ public abstract class Animal {
     }
 
     private String name;
-    private int swimLength;
-    private int runLength;
+    private int swim;
+    private int run;
     private static int sum;
 
-    abstract void runLength(int length);
-    abstract void swimLength(int length);
 
     public Animal(String name, int swim, int run) {
         this.name = name;
-        this.swimLength = swim;
-        this.runLength = run;
+        this.swim = swim;
+        this.run = run;
 
 
     }
@@ -33,33 +31,36 @@ public abstract class Animal {
         Animal.sum = sum;
     }
 
-    public int getSwimLength() {
-        return swimLength;
+    public int getSwim() {
+        return swim;
     }
 
-    public void setSwimLength(int swim) {
-        this.swimLength = swimLength;
+    public void setSwim(int swim) {
+        this.swim = swim;
 
     }
-    public int getRunLength() {
-        return swimLength;
-    }
 
-    public void setRunLength(int runLength) {
-        this.runLength = runLength;
-
-    }
     public void setName(String name) {
         this.name = name;
     }
 
+    public int getRun() {
+        return run;
+    }
 
+    public void setRun(int run) {
+        if (run <= 200 && run > 0) {
+            this.run = run;
+        } else {
+            System.out.println(200);
 
-       /* public void print () {
-            System.out.println(name + " пробежал " + run());
-            System.out.println(name + " проплыл " + getSwim());*/
         }
-
+        }
+        public void print () {
+            System.out.println(name + " пробежал " + getRun());
+            System.out.println(name + " проплыл " + getSwim());
+        }
+    }
 
 
 

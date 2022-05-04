@@ -13,7 +13,8 @@ public class HomeWork {
         final  Dog Tuzik = new Dog ("Тузик", 0 , 200);
 
 
-
+Sharik.runLength(300);
+        System.out.println(Sharik.getRunLength());
 
     }
 }
