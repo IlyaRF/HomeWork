@@ -8,7 +8,10 @@ public class Cat extends Animal {
     @Override
     public void setRun(int run) {
         run = Math.max(run, 200);
-    }
+
+        }
+
+
 
     @Override
     public void setSwim(int swim) {

@@ -1,16 +1,21 @@
 package ru.GB.Gaitanov.I.HomeWork6;
 
 public class Animal {
+    public void main(String[] args) {
+
+    }
 
     private String name;
     private int swim;
     private int run;
     private static int sum;
 
+
     public Animal(String name, int swim, int run) {
         this.name = name;
         this.swim = swim;
         this.run = run;
+
 
     }
     public String getName() {
@@ -44,10 +49,12 @@ public class Animal {
 
     public void setRun(int run) {
         this.run = run;
+
+
     }
     public void print() {
-        System.out.println(name + " пробежал " + run);
-        System.out.println(name + " проплыл " + swim);
+        System.out.println(name + " пробежал " + this.run);
+        System.out.println(name + " проплыл " + this.swim);
     }
 }
 
