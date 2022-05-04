@@ -10,8 +10,8 @@ public abstract class Animal {
     private int runLength;
     private static int sum;
 
-    abstract void run(int length);
-    abstract void swim(int length);
+    abstract void runLength(int length);
+    abstract void swimLength(int length);
 
     public Animal(String name, int swim, int run) {
         this.name = name;

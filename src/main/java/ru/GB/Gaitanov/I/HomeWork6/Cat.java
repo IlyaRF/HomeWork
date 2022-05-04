@@ -5,13 +5,13 @@ public class Cat extends Animal {
         super(name, swim, run);
     }
     @Override
-    void run(int length) {
+    void runLength(int length) {
         if ((length >= 0) && (length <= getRunLength())) System.out.println("run: true");
         else System.out.println("run: false");
     }
 
     @Override
-    void swim(int length) {
+    void swimLength(int length) {
         System.out.println("swim: false");
     }
 
