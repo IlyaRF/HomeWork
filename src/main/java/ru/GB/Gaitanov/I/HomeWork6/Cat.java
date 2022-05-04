@@ -4,19 +4,18 @@ public class Cat extends Animal {
     public Cat(String name, int swim, int run) {
         super(name, swim, run);
     }
+    @Override
+    void run(int length) {
+        if ((length >= 0) && (length <= runLength)) System.out.println("run: true");
+        else System.out.println("run: false");
+    }
 
     @Override
-    public void setRun(int run) {
-        run = Math.max(run, 200);
+    void swim(int length) {
+        System.out.println("swim: false");
+    }
 
-        }
-
-
-
-    @Override
-    public void setSwim(int swim) {
-        swim = Math.max(swim, 200);
 
     }
-}
+
 

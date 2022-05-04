@@ -1,23 +1,26 @@
 package ru.GB.Gaitanov.I.HomeWork6;
 
-public class Animal {
+public abstract class Animal {
     public void main(String[] args) {
 
     }
 
     private String name;
-    private int swim;
-    private int run;
+    private int swimLength;
+    private int runLenght;
     private static int sum;
 
+    abstract void run(int length);
+    abstract void swim(int length);
 
     public Animal(String name, int swim, int run) {
         this.name = name;
-        this.swim = swim;
-        this.run = run;
+        this.swimLength = swim;
+        this.runLenght = run;
 
 
     }
+
     public String getName() {
         return name;
     }
@@ -30,32 +33,33 @@ public class Animal {
         Animal.sum = sum;
     }
 
-    public double getSwim() {
-        return swim;
+    public int getSwimLength() {
+        return swimLength;
     }
 
-    public void setSwim(int swim) {
-        this.swim = swim;
+    public void setSwimLength(int swim) {
+        this.swimLength = swimLength;
 
     }
+    public int getRunLenght() {
+        return swimLength;
+    }
 
+    public void setRunLenght(int runLenght) {
+        this.runLenght = runLenght;
+
+    }
     public void setName(String name) {
         this.name = name;
     }
 
-    public double getRun() {
-        return run;
-    }
-
-    public void setRun(int run) {
-        this.run = run;
 
 
-    }
-    public void print() {
-        System.out.println(name + " пробежал " + this.run);
-        System.out.println(name + " проплыл " + this.swim);
-    }
-}
+       /* public void print () {
+            System.out.println(name + " пробежал " + run());
+            System.out.println(name + " проплыл " + getSwim());*/
+        }
+
+
 
 

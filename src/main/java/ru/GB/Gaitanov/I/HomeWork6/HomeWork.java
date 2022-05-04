@@ -13,6 +13,9 @@ public class HomeWork {
         final  Dog Tuzik = new Dog ("Тузик", 0 , 200);
 
 
+Murzik.setRun(200);
+
+        System.out.println();
 
     }
 }

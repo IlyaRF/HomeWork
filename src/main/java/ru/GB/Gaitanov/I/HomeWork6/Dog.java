@@ -5,4 +5,8 @@ public class Dog extends Animal {
         super(name, swim, run);
     }
 
+
+    public void run() {
+        System.out.println(2);
 }
+    }
