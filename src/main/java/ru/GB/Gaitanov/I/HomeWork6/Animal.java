@@ -6,7 +6,8 @@ public abstract class Animal {
     private String name;
     private int swim;
     private int run;
-    private static int sum;
+    private static int sumDog;
+    private static int sumCat;
 
 
     public Animal(String name, int swim, int run) {
@@ -20,54 +21,53 @@ public abstract class Animal {
     public String getName() {
         return name;
     }
+    public void setName(String name) {
+        this.name = name;
 
-    public static int getSum() {
-        return sum;
+    }
+    public static int getSumCat() {
+        return sumCat;
     }
 
-    public static void setSum(int sum) {
-        Animal.sum = sum;
+    public static void setSumCat(int sum) {
+        Animal.sumCat = sum;
+
+    }
+    public static int getSumDog() {
+        return sumDog;
+    }
+
+    public static void setSumDog(int sum) {
+        Animal.sumDog = sum;
     }
 
     public int getSwim() {
         return swim;
     }
 
-    public void setSwim(int swim) {
+    public int setSwim(int swim) {
+        this.swim = swim;
 
-        if (swim == 0) {
-            this.swim = swim;
-        } else {
-            this.swim = 0;
-
-        }
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getName(String name) {
-        return name;
+        return swim;
     }
 
     public int getRun() {
         return run;
     }
 
-    public void setRun(int run) {
-        if (run <= 200 && run > 0) {
-            this.run = run;
-        } else {
-            this.run = 200;
+    public int setRun(int run) {
+        this.run = run;
 
-        }
-        }
-        public void print () {
-            System.out.println(name + " пробежал " + getRun());
-            System.out.println(name + " проплыл " + getSwim());
-        }
+        return run;
     }
+
+    public void print() {
+        System.out.println(getName() + " пробежал " + getRun());
+        System.out.println(getName() + " проплыл " + getSwim());
+
+
+    }
+}
 
 
 

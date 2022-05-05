@@ -7,16 +7,19 @@ public class Dog extends Animal {
 
 
     @Override
-    public void setRun(int run) {
-        run = Math.max(run, 200);
+    public int setRun(int run) {
+        if (run > 0 && run < 500)
+            return super.setRun(run);
 
+        else
+            return super.setRun(500);
     }
-
-
-
     @Override
-    public void setSwim(int swim) {
-        swim = Math.max(swim, 200);
+    public int setSwim(int swim) {
+        if (swim > 0 && swim < 10)
+            return super.setSwim(swim);
+        else
+            return super.setSwim(10);
 
     }
 }
