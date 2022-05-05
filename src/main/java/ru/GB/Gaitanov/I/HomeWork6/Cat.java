@@ -5,7 +5,8 @@ public class Cat extends Animal {
         super(name, swim, run);
     }
 
-    @Override
+
+   /* @Override
     public void setRun(int run) {
         run = Math.max(run, 200);
 
@@ -15,8 +16,8 @@ public class Cat extends Animal {
 
     @Override
     public void setSwim(int swim) {
-        swim = Math.max(swim, 200);
+        swim = Math.max(swim, 200);*/
 
     }
-}
+
 

@@ -1,9 +1,7 @@
 package ru.GB.Gaitanov.I.HomeWork6;
 
 public abstract class Animal {
-    public void main(String[] args) {
 
-    }
 
     private String name;
     private int swim;
@@ -36,12 +34,21 @@ public abstract class Animal {
     }
 
     public void setSwim(int swim) {
-        this.swim = swim;
 
+        if (swim == 0) {
+            this.swim = swim;
+        } else {
+            this.swim = 0;
+
+        }
     }
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getName(String name) {
+        return name;
     }
 
     public int getRun() {
@@ -52,7 +59,7 @@ public abstract class Animal {
         if (run <= 200 && run > 0) {
             this.run = run;
         } else {
-            System.out.println(200);
+            this.run = 200;
 
         }
         }

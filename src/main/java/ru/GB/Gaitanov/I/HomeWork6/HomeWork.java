@@ -1,6 +1,11 @@
 package ru.GB.Gaitanov.I.HomeWork6;
 
-public class HomeWork {
+public class HomeWork extends Animal {
+
+    public HomeWork(String name, int swim, int run) {
+        super(name, swim, run);
+    }
+
     public static void main(String[] args) {
 
 
@@ -13,8 +18,11 @@ public class HomeWork {
         final  Dog Tuzik = new Dog ("Тузик", 0 , 200);
 
 
-Sharik.runLength(300);
-        System.out.println(Sharik.getRunLength());
+        Murzik.setRun(500);
+        Murzik.setSwim(200);
+
+        Murzik.print();
+
 
     }
 }
