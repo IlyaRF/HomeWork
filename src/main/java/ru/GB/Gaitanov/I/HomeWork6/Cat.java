@@ -8,7 +8,7 @@ public class Cat extends Animal {
 
     @Override
     public int setRun(int run) {
-        if (run > 0 && run < 200)
+        if (run >= 0 && run <= 200)
             return super.setRun(run);
 
         else
@@ -23,12 +23,6 @@ public class Cat extends Animal {
     }
 
 
-
-    /*@Override
-    public int getRun() {
-        if (getRun() > 200)
-            int getRun() = 0;
-        return getRun();*/
     }
 
 

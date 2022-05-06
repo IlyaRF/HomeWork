@@ -1,6 +1,6 @@
 package ru.GB.Gaitanov.I.HomeWork6;
 
-public abstract class Animal {
+public abstract class Animal<counter> {
 
 
     private String name;
@@ -15,30 +15,20 @@ public abstract class Animal {
         this.swim = swim;
         this.run = run;
 
-
     }
 
     public String getName() {
         return name;
     }
-    public void setName(String name) {
-        this.name = name;
 
-    }
-    public static int getSumCat() {
-        return sumCat;
+
+    public static void setSumCat(int sum2) {
+        sumCat = sum2;
     }
 
-    public static void setSumCat(int sum) {
-        Animal.sumCat = sum;
+    public static void setSumDog(int sum1) {
+        sumDog = sum1;
 
-    }
-    public static int getSumDog() {
-        return sumDog;
-    }
-
-    public static void setSumDog(int sum) {
-        Animal.sumDog = sum;
     }
 
     public int getSwim() {
@@ -61,13 +51,21 @@ public abstract class Animal {
         return run;
     }
 
+
     public void print() {
         System.out.println(getName() + " пробежал " + getRun());
         System.out.println(getName() + " проплыл " + getSwim());
+    }
+        public static void printCounter() {
+            System.out.println("Всего собак создано - " + sumDog + ". Всего кошек создано - " + sumCat);
 
+
+        }
 
     }
-}
+
+
+
 
 
 

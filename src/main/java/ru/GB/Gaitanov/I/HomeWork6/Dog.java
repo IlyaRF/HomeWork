@@ -8,7 +8,7 @@ public class Dog extends Animal {
 
     @Override
     public int setRun(int run) {
-        if (run > 0 && run < 500)
+        if (run >= 0 && run <= 500)
             return super.setRun(run);
 
         else
@@ -16,10 +16,11 @@ public class Dog extends Animal {
     }
     @Override
     public int setSwim(int swim) {
-        if (swim > 0 && swim < 10)
+        if (swim > 0 && swim <= 10)
             return super.setSwim(swim);
+
         else
-            return super.setSwim(10);
+            return super.setSwim(0);
 
     }
 }
