@@ -1,6 +1,6 @@
 package ru.GB.Gaitanov.I.HomeWork6;
 
-public abstract class Animal<counter> {
+public abstract class Animal {
 
 
     private String name;
