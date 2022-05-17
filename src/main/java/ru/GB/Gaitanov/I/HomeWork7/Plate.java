@@ -10,13 +10,15 @@ public class Plate {
 
     public void decreaseFood(int n) {
 
-        if (n < food)
+        if (n < food) {
             food -= n;
-        if (n < food)
             System.out.println("Кот поел");
-        else
-            food = food + 200;
-            System.out.println("Недостаточно еды в тарелке, добавил 200 еды");
+        } else {
+            System.out.println("Недостаточно еды в тарелке, добавил 500 еды");
+            this.food = 500;
+        }
+
+
 
 
     }
