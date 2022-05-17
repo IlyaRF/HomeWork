@@ -10,18 +10,22 @@ public class MainClass {
         plate.info();
         cat.info();
         cat.eat(plate);
+        cat.check();
         plate.info();
-        plate.infoSatiety();
+        cat.info();
         cat1.info();
         cat1.eat(plate);
+        cat1.check();
+        cat1.info();
         plate.info();
-        plate.infoSatiety();
         cat2.info();
         cat2.eat(plate);
+        cat2.check();
+        cat2.info();
         plate.info();
-        plate.infoSatiety();
         cat3.info();
         cat3.eat(plate);
+        cat3.check();
         plate.info();
         plate.setFood(plate.getFood() - cat.getAppetite());
 
