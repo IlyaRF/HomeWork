@@ -35,35 +35,142 @@ public class Window extends JFrame {
         add(button1, BorderLayout.NORTH);
         add(button2, BorderLayout.SOUTH);
         add(button3, BorderLayout.CENTER);
-        add(button4, BorderLayout.NORTH);
+        add(button4, BorderLayout.WEST);
+        setBounds(new Rectangle());
+
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                button1.setText("on");
+            }
+        });
+        button2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                button2.setText("root");
+            }
+        });
+        button3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                button3.setText("%");
+            }
+        });
+        button4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                button4.setText("/");
+            }
+        });
+        button5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                button5.setText("X");
+            }
+        });
+        button6.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                button6.setText("-");
+            }
+        });
+        button7.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                button7.setText("+");
+            }
+        });
+        button8.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                button8.setText("=");
+            }
+        });
+        button9.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                button9.setText(".");
+            }
+        });
+
+        button10.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
                 button10.setText("0");
+            }
+        });
+        button11.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
                 button11.setText("1");
+            }
+        });
+        button12.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
                 button12.setText("2");
+            }
+        });
+        button13.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
                 button13.setText("3");
+            }
+        });
+        button14.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
                 button14.setText("4");
+            }
+        });
+        button15.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
                 button15.setText("5");
+            }
+        });
+
+        button16.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
                 button16.setText("6");
+            }
+        });
+
+        button16.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
                 button17.setText("7");
+            }
+        });
+        button16.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
                 button18.setText("8");
+            }
+        });
+        button16.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
                 button19.setText("9");
-                setBounds(new Rectangle());
-                setVisible(true);
-
-
             }
-
-            public static void main(String[] args) {
-                new Window();
-            }
-
-            class Buttons extends ActionListener {
+        });
 
 
-                @Override
-                public void actionPerformed(ActionEvent e) {
+        setVisible(true);
 
-                }
-            }
+    }
+
+    public static void main(String[] args) {
+        new Window();
+    }
+}
+
+class Buttons implements ActionListener {
+
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+    }
+}
