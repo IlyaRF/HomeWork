@@ -13,84 +13,84 @@ public class Window extends JFrame {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setBounds(300, 300, 400, 400);
         final JButton[] jButtons= new JButton[19];
-        final JButton button1 = new JButton("CE");
-        final JButton button2 = new JButton("ROOT");
-        final JButton button3 = new JButton("%");
-        final JButton button4 = new JButton("/");
-        final JButton button5 = new JButton("X");
-        final JButton button6 = new JButton("-");
-        final JButton button7 = new JButton("+");
-        final JButton button8 = new JButton("=");
-        final JButton button9 = new JButton(".");
-        final JButton button10 = new JButton("0");
-        final JButton button11 = new JButton("1");
-        final JButton button12 = new JButton("2");
-        final JButton button13 = new JButton("3");
-        final JButton button14 = new JButton("4");
-        final JButton button15 = new JButton("5");
-        final JButton button16 = new JButton("6");
-        final JButton button17 = new JButton("7");
-        final JButton button18 = new JButton("8");
-        final JButton button19 = new JButton("9");
+        jButtons[1] = new JButton("CE");
+        jButtons[2] = new JButton("ROOT");
+        jButtons[3] = new JButton("%");
+        jButtons[4] = new JButton("/");
+        jButtons[5] = new JButton("X");
+        jButtons[6] = new JButton("-");
+        jButtons[7] = new JButton("+");
+        jButtons[8] = new JButton("=");
+        jButtons[9] = new JButton(".");
+        jButtons[10] = new JButton("0");
+        jButtons[11] = new JButton("1");
+        jButtons[12] = new JButton("2");
+        jButtons[13] = new JButton("3");
+        jButtons[14] = new JButton("4");
+        jButtons[15] = new JButton("5");
+        jButtons[16] = new JButton("6");
+        jButtons[17] = new JButton("7");
+        jButtons[18] = new JButton("8");
+        jButtons[19] = new JButton("9");
 
-        add(button1, BorderLayout.NORTH);
-        add(button2, BorderLayout.SOUTH);
-        add(button3, BorderLayout.CENTER);
-        add(button4, BorderLayout.WEST);
+        add(jButtons[1], BorderLayout.NORTH);
+        add(jButtons[2], BorderLayout.SOUTH);
+        add(jButtons[3], BorderLayout.CENTER);
+        add(jButtons[4], BorderLayout.WEST);
         setBounds(new Rectangle());
 
-        button1.addActionListener(new ActionListener() {
+        jButtons[1].addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                button1.setText("on");
+                jButtons[1].setText("on");
             }
         });
-        button2.addActionListener(new ActionListener() {
+        jButtons[2].addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                button2.setText("root");
+                jButtons[2].setText("root");
             }
         });
-        button3.addActionListener(new ActionListener() {
+        jButtons[3].addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                button3.setText("%");
+                jButtons[3].setText("%");
             }
         });
-        button4.addActionListener(new ActionListener() {
+        jButtons[4].addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                button4.setText("/");
+                jButtons[4].setText("/");
             }
         });
-        button5.addActionListener(new ActionListener() {
+        jButtons[5].addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                button5.setText("X");
+                jButtons[5].setText("X");
             }
         });
-        button6.addActionListener(new ActionListener() {
+        jButtons[6].addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                button6.setText("-");
+                jButtons[6].setText("-");
             }
         });
-        button7.addActionListener(new ActionListener() {
+        jButtons[7].addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                button7.setText("+");
+                jButtons[7].setText("+");
             }
         });
-        button8.addActionListener(new ActionListener() {
+        jButtons[8].addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                button8.setText("=");
+                jButtons[8].setText("=");
             }
         });
-        button9.addActionListener(new ActionListener() {
+        jButtons[9].addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                button9.setText(".");
+                jButtons[9].setText(".");
             }
         });
 
@@ -100,20 +100,20 @@ public class Window extends JFrame {
                 final  JButton button = (JButton) e.getSource();
                 final  String text = button.getText();
                 String btnNumber = text.substring(text.length() - 1);
-                button10.setText(btnNumber);
+                jButtons[10].setText(btnNumber);
 
             }
         };
-        button10.addActionListener(btnListener);
-        button11.addActionListener(btnListener);
-        button12.addActionListener(btnListener);
-        button13.addActionListener(btnListener);
-        button14.addActionListener(btnListener);
-        button15.addActionListener(btnListener);
-        button16.addActionListener(btnListener);
-        button17.addActionListener(btnListener);
-        button18.addActionListener(btnListener);
-        button19.addActionListener(btnListener);
+        jButtons[10].addActionListener(btnListener);
+        jButtons[11].addActionListener(btnListener);
+        jButtons[12].addActionListener(btnListener);
+        jButtons[13].addActionListener(btnListener);
+        jButtons[14].addActionListener(btnListener);
+        jButtons[15].addActionListener(btnListener);
+        jButtons[16].addActionListener(btnListener);
+        jButtons[17].addActionListener(btnListener);
+        jButtons[18].addActionListener(btnListener);
+        jButtons[19].addActionListener(btnListener);
 
 
         setVisible(true);
