@@ -12,6 +12,7 @@ public class Window extends JFrame {
         setTitle("Test Window");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setBounds(300, 300, 400, 400);
+        final JButton[] jButtons= new JButton[19];
         final JButton button1 = new JButton("CE");
         final JButton button2 = new JButton("ROOT");
         final JButton button3 = new JButton("%");
@@ -93,68 +94,26 @@ public class Window extends JFrame {
             }
         });
 
-        button10.addActionListener(new ActionListener() {
+        ActionListener btnListener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                button10.setText("0");
-            }
-        });
-        button11.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                button11.setText("1");
-            }
-        });
-        button12.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                button12.setText("2");
-            }
-        });
-        button13.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                button13.setText("3");
-            }
-        });
-        button14.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                button14.setText("4");
-            }
-        });
-        button15.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                button15.setText("5");
-            }
-        });
+                final  JButton button = (JButton) e.getSource();
+                final  String text = button.getText();
+                String btnNumber = text.substring(text.length() - 1);
+                button10.setText(btnNumber);
 
-        button16.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                button16.setText("6");
             }
-        });
-
-        button16.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                button17.setText("7");
-            }
-        });
-        button16.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                button18.setText("8");
-            }
-        });
-        button16.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                button19.setText("9");
-            }
-        });
+        };
+        button10.addActionListener(btnListener);
+        button11.addActionListener(btnListener);
+        button12.addActionListener(btnListener);
+        button13.addActionListener(btnListener);
+        button14.addActionListener(btnListener);
+        button15.addActionListener(btnListener);
+        button16.addActionListener(btnListener);
+        button17.addActionListener(btnListener);
+        button18.addActionListener(btnListener);
+        button19.addActionListener(btnListener);
 
 
         setVisible(true);
