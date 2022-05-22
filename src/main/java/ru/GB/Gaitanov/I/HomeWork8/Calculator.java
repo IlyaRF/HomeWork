@@ -35,9 +35,10 @@ public class Calculator extends JFrame {
         jButtons[18] = new JButton("=");
         jButtons[19] = new JButton("+");
 
-
-        final LayoutManager boxLayout = new GridLayout(5,4);
-        setLayout(boxLayout);
+        JPanel numberPanel = new JPanel();
+        numberPanel.setLayout(numberPanel.getLayout());
+        final LayoutManager numberLayout = new GridLayout(5, 4, 10, 10);
+        setLayout(numberLayout);
         setBounds(new Rectangle());
 
         jButtons[1].addActionListener(new ActionListener() {
@@ -108,6 +109,9 @@ public class Calculator extends JFrame {
         for (JButton jButton : jButtons) {
             add(jButton);
             jButton.addActionListener(btnListener);
+
+            JLabel display = new JLabel("0");
+            display.setHorizontalAlignment(SwingConstants.RIGHT);
         }
 
         setVisible(true);
