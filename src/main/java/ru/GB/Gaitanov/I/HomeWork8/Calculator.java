@@ -5,9 +5,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Window extends JFrame {
+public class Calculator extends JFrame {
 
-    public Window() {
+    public Calculator() {
 
         setTitle("Test Window");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -36,15 +36,8 @@ public class Window extends JFrame {
         jButtons[19] = new JButton("+");
 
 
-
-
-
         final LayoutManager boxLayout = new GridLayout(5,4);
         setLayout(boxLayout);
-        add(jButtons[1], BorderLayout.NORTH);
-        add(jButtons[2], BorderLayout.SOUTH);
-        add(jButtons[3], BorderLayout.CENTER);
-        add(jButtons[4], BorderLayout.WEST);
         setBounds(new Rectangle());
 
         jButtons[1].addActionListener(new ActionListener() {
@@ -122,7 +115,7 @@ public class Window extends JFrame {
     }
 
     public static void main(String[] args) {
-        new Window();
+        new Calculator();
     }
 }
 
