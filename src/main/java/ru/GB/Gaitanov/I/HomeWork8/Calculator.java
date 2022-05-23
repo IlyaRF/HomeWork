@@ -99,6 +99,7 @@ public class Calculator extends JFrame {
         symbolPanel.setLayout(symbolLayout);
         for (char c : "C+-*/%=".toCharArray()) {
             JButton jButtons = new JButton(String.valueOf(c));
+            jButtons.addActionListener(symbolListener);
             symbolPanel.add(jButtons);
             jButtons.setFont(new Font("Arial", Font.BOLD, 50));
 
