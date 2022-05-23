@@ -11,7 +11,7 @@ public class Calculator extends JFrame {
 
         setTitle("Calculator");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setBounds(300, 300, 400, 400);
+        setBounds(300, 300, 600, 600);
         setLayout(new BorderLayout());
         JPanel numberPanel = new JPanel();
         GridLayout numberLayout = new GridLayout(5, 4, 10, 10);
@@ -22,7 +22,8 @@ public class Calculator extends JFrame {
             numberPanel.add(jButtons);
             JLabel display = new JLabel("0");
             display.setHorizontalAlignment(SwingConstants.RIGHT);
-            display.setFont(new Font("Arial", Font.BOLD, 25));
+            display.setFont(new Font("Arial", Font.BOLD, 100));
+            jButtons.setFont(new Font("Arial", Font.BOLD, 50));
             add(display, BorderLayout.NORTH);
             add(numberPanel, BorderLayout.CENTER);
         }
