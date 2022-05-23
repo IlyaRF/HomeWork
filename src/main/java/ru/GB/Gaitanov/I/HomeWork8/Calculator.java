@@ -14,7 +14,7 @@ public class Calculator extends JFrame {
 
         setTitle("Calculator");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setBounds(300, 300, 400, 600);
+        setBounds(300, 300, 400, 500);
         setLayout(new BorderLayout());
 
         JLabel display = new JLabel("0");
@@ -85,11 +85,12 @@ public class Calculator extends JFrame {
         numberPanel.setLayout(numberLayout);
 
         for (int i = 0; i < 10; i++) {
-            final JButton jButtons = new JButton(String.valueOf(i));
+            JButton jButtons = new JButton(String.valueOf(i));
             jButtons.addActionListener(numberListener);
             numberPanel.add(jButtons);
             jButtons.setFont(new Font("Arial", Font.BOLD, 50));
             jButtons.setBackground(Color.yellow);
+            jButtons.setSize(50, 50);
         }
 
         JButton pointButton = new JButton(".");
@@ -105,6 +106,7 @@ public class Calculator extends JFrame {
             symbolPanel.add(jButtons);
             jButtons.setFont(new Font("Arial", Font.BOLD, 50));
             jButtons.setBackground(Color.orange);
+            jButtons.setSize(50, 50);
 
         }
 
