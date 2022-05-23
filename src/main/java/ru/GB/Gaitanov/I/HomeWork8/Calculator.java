@@ -11,7 +11,7 @@ public class Calculator extends JFrame {
 
         setTitle("Calculator");
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        setBounds(300, 300, 600, 600);
+        setBounds(300, 300, 400, 600);
         setLayout(new BorderLayout());
 
         JLabel display = new JLabel("0");
@@ -25,45 +25,65 @@ public class Calculator extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 JButton jButtons = (JButton) e.getSource();
                 String text = jButtons.getText();
+                String displayText = display.getText();
+
                 if (".".equals(text) && display.getText().contains(".")) {
                     return;
                 }
-                String displayText = display.getText();
+                if ("0".equals(displayText) && !".".equals(text)) {
+                    displayText = "";
+                }
                 displayText += text;
                 display.setText(displayText);
             }
         };
 
         JPanel numberPanel = new JPanel();
-        add(numberPanel, BorderLayout.CENTER);
-        GridLayout numberLayout = new GridLayout(5, 4, 10, 10);
+        GridLayout numberLayout = new GridLayout(4, 3, 10, 10);
         numberPanel.setLayout(numberLayout);
 
         for (int i = 0; i < 10; i++) {
             final JButton jButtons = new JButton(String.valueOf(i));
             jButtons.addActionListener(numberListener);
             numberPanel.add(jButtons);
-
             jButtons.setFont(new Font("Arial", Font.BOLD, 50));
         }
-        JButton pointButton = new JButton(".");
-        JButton plusOrMinus = new JButton("+/-");
-        JButton multiply = new JButton("*");
-        JButton divide = new JButton("/");
-        JButton percent = new JButton("%");
-        JButton result = new JButton("=");
-        JButton root = new JButton("root");
-        JButton reset = new JButton("CE");
 
-numberPanel.add(pointButton);
+        JButton pointButton = new JButton(".");
+        pointButton.addActionListener(numberListener);
+        pointButton.setFont(new Font("Arial", Font.BOLD, 50));
+
+        JPanel symbolPanel = new JPanel();
+        GridLayout symbolLayout = new GridLayout(4, 2, 10, 10);
+        symbolPanel.setLayout(symbolLayout);
+        for (char c : "C+-*/%=".toCharArray()) {
+            JButton jButtons = new JButton(String.valueOf(c));
+            symbolPanel.add(jButtons);
+            jButtons.setFont(new Font("Arial", Font.BOLD, 50));
+
+        }
+
+        /*plusOrMinus.setFont(new Font("Arial", Font.BOLD, 50));
+        multiply.setFont(new Font("Arial", Font.BOLD, 50));
+        divide.setFont(new Font("Arial", Font.BOLD, 50));
+        percent.setFont(new Font("Arial", Font.BOLD, 50));
+        result.setFont(new Font("Arial", Font.BOLD, 50));
+        root.setFont(new Font("Arial", Font.BOLD, 50));
+        reset.setFont(new Font("Arial", Font.BOLD, 50));
+
+
+        numberPanel.add(pointButton);
         numberPanel.add(plusOrMinus);
         numberPanel.add(multiply);
         numberPanel.add(divide);
         numberPanel.add(percent);
         numberPanel.add(result);
         numberPanel.add(root);
-        numberPanel.add(reset);
+        numberPanel.add(reset);*/
 
+        add(symbolPanel, BorderLayout.EAST);
+        add(pointButton, BorderLayout.AFTER_LAST_LINE);
+        add(numberPanel, BorderLayout.WEST);
         setVisible(true);
 
     }
