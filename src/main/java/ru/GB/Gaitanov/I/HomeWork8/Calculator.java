@@ -7,6 +7,9 @@ import java.awt.event.ActionListener;
 
 public class Calculator extends JFrame {
 
+    private Double leftOperand;
+    private String operation;
+
     public Calculator() {
 
         setTitle("Calculator");
@@ -38,6 +41,44 @@ public class Calculator extends JFrame {
             }
         };
 
+        ActionListener symbolListener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JButton source = (JButton) e.getSource();
+                String action = source.getText();
+                double rightOperand = Double.parseDouble(display.getText());
+
+                if ("=".equals(action)) {
+                    if (leftOperand != null) {
+                        switch (operation) {
+                            case "+":
+                                display.setText(String.valueOf(leftOperand + rightOperand));
+                                break;
+                            case "-":
+                                display.setText(String.valueOf(leftOperand - rightOperand));
+                                break;
+                            case "/":
+                                display.setText(String.valueOf(leftOperand / rightOperand));
+                                break;
+                            case "*":
+                                display.setText(String.valueOf(leftOperand * rightOperand));
+                                break;
+                            case "%":
+                                display.setText(String.valueOf(leftOperand * rightOperand/ 100));
+                                break;
+
+                        }
+                        leftOperand = Double.parseDouble(display.getText());
+                        operation = null;
+                    }
+                    return;
+                }
+                leftOperand = Double.parseDouble(display.getText());
+                operation = action;
+                display.setText("0");
+            }
+        };
+
         JPanel numberPanel = new JPanel();
         GridLayout numberLayout = new GridLayout(4, 3, 10, 10);
         numberPanel.setLayout(numberLayout);
@@ -62,24 +103,6 @@ public class Calculator extends JFrame {
             jButtons.setFont(new Font("Arial", Font.BOLD, 50));
 
         }
-
-        /*plusOrMinus.setFont(new Font("Arial", Font.BOLD, 50));
-        multiply.setFont(new Font("Arial", Font.BOLD, 50));
-        divide.setFont(new Font("Arial", Font.BOLD, 50));
-        percent.setFont(new Font("Arial", Font.BOLD, 50));
-        result.setFont(new Font("Arial", Font.BOLD, 50));
-        root.setFont(new Font("Arial", Font.BOLD, 50));
-        reset.setFont(new Font("Arial", Font.BOLD, 50));
-
-
-        numberPanel.add(pointButton);
-        numberPanel.add(plusOrMinus);
-        numberPanel.add(multiply);
-        numberPanel.add(divide);
-        numberPanel.add(percent);
-        numberPanel.add(result);
-        numberPanel.add(root);
-        numberPanel.add(reset);*/
 
         add(symbolPanel, BorderLayout.EAST);
         add(pointButton, BorderLayout.AFTER_LAST_LINE);
