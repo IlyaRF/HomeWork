@@ -67,6 +67,7 @@ public class Calculator extends JFrame {
                                 display.setText(String.valueOf(leftOperand * rightOperand/ 100));
                                 break;
 
+
                         }
                         leftOperand = Double.parseDouble(display.getText());
                         operation = null;
@@ -88,6 +89,7 @@ public class Calculator extends JFrame {
             jButtons.addActionListener(numberListener);
             numberPanel.add(jButtons);
             jButtons.setFont(new Font("Arial", Font.BOLD, 50));
+            jButtons.setBackground(Color.yellow);
         }
 
         JButton pointButton = new JButton(".");
@@ -102,6 +104,7 @@ public class Calculator extends JFrame {
             jButtons.addActionListener(symbolListener);
             symbolPanel.add(jButtons);
             jButtons.setFont(new Font("Arial", Font.BOLD, 50));
+            jButtons.setBackground(Color.orange);
 
         }
 
