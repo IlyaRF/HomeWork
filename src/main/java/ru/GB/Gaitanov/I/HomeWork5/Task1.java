@@ -20,11 +20,11 @@ public class Task1 {
                 arr[i] = initialValue;
         */
 
-            for (int i = 0; i < emp.length; i++) {
-                if (emp[i].getAge() >= 40)
-                    System.out.println(emp[i].getNameSurnamePatronymic() + " старше 40 лет");
+        for (int i = 0; i < emp.length; i++) {
+            if (emp[i].getAge() >= 40)
+                System.out.println(emp[i].getNameSurnamePatronymic() + " старше 40 лет");
 
-            }
+        }
     }
 }
 
