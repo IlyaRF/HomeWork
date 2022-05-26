@@ -26,5 +26,9 @@ public class Main {
         robot[1] = new Robot("T-X", 50, 20);
 
 
+cat[0].run(5);
     }
+
+
 }
+
