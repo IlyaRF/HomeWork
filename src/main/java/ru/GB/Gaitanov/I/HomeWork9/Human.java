@@ -12,4 +12,12 @@ public class Human {
         this.run = run;
         this.jump = jump;
     }
+
+    public void run(int r) {
+
+    }
+
+    public void jump(int j) {
+
+    }
 }

@@ -13,6 +13,12 @@ public class Cat {
         this.jump = jump;
     }
 
+    public void run(int param) {
 
     }
+
+    public void jump(int param) {
+
+    }
+}
 

@@ -5,6 +5,7 @@ public class Main {
     public static void main(String[] args) {
 
 
+
         Cat[] cat = new Cat[3];
 
         cat[0] = new Cat("Murzik", 20, 5);
