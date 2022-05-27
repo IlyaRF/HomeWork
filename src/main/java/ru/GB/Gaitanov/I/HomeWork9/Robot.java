@@ -3,14 +3,14 @@ package ru.GB.Gaitanov.I.HomeWork9;
 public class Robot implements Run, Jump{
 
     String name;
-    int run;
-    int jump;
+    int checkRun;
+    int checkJump;
 
-    public Robot(String name, int run, int jump) {
+    public Robot(String name, int checkRun, int checkJump) {
 
         this.name = name;
-        this.run = run;
-        this.jump = jump;
+        this.checkRun = checkRun;
+        this.checkJump = checkJump;
     }
 
     public void run(int r) {

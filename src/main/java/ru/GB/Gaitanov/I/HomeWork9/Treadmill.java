@@ -1,12 +1,14 @@
 package ru.GB.Gaitanov.I.HomeWork9;
 
+
 public class Treadmill {
 
-    int length;
+    private final Run run;
 
 
-    public Treadmill(int length) {
-        this.length = length;
+    public Treadmill(Run run) {
+        this.run = run;
 
     }
+
 }

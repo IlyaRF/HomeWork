@@ -4,6 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+        Jump jump =  ;
+
 
         Cat[] cat = new Cat[3];
 
