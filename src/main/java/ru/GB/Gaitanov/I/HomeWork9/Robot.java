@@ -1,23 +1,39 @@
 package ru.GB.Gaitanov.I.HomeWork9;
 
-public class Robot implements Run, Jump{
+public class Robot{
 
-    String name;
-    int checkRun;
-    int checkJump;
+    private String name;
+    private int run;
+    private int jump;
 
-    public Robot(String name, int checkRun, int checkJump) {
 
+    public Robot(String name, int run, int jump) {
         this.name = name;
-        this.checkRun = checkRun;
-        this.checkJump = checkJump;
+        this.run = run;
+        this.jump = jump;
     }
 
-    public void run() {
-
+    public String getName() {
+        return name;
     }
 
-    public void jump() {
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public int getRun() {
+        return run;
+    }
+
+    public void setRun(int run) {
+        this.run = run;
+    }
+
+    public int getJump() {
+        return jump;
+    }
+
+    public void setJump(int jump) {
+        this.jump = jump;
     }
 }

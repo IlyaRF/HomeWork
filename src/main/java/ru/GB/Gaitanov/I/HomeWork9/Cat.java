@@ -1,47 +1,42 @@
 package ru.GB.Gaitanov.I.HomeWork9;
 
-public class Cat implements Run, Jump {
+public class Cat {
 
-    private final String name;
-    private final int checkRun;
-    private final int checkJump;
+    private String name;
+    private int run;
+    private int jump;
 
 
-
-    public Cat(String name, int checkRun, int checkJump) {
+    public Cat(String name, int run, int jump) {
         this.name = name;
-        this.checkRun = checkRun;
-        this.checkJump = checkJump;
+        this.run = run;
+        this.jump = jump;
+
 
     }
 
-   /* public void run() {
-
-           // if (checkRun <= ())
-                System.out.println("Кот прыгнул");
-            else
-
-        System.out.println("Кот не прыгнул");
-    }*/
-
-    public int getCheckJump() {
-        return checkJump;
+    public int getRun() {
+        return run;
     }
 
-    public int getCheckRun() {
-        return checkRun;
+    public void setRun(int run) {
+        this.run = run;
     }
 
     public String getName() {
         return name;
     }
 
-    @Override
-    public void run() {
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void jump() {
-        System.out.println("Кот прыгнул");
+    public int getJump() {
+        return jump;
+    }
+
+    public void setJump(int jump) {
+        this.jump = jump;
     }
 }
 

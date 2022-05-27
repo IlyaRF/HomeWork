@@ -27,11 +27,6 @@ public class Main {
 
 
 
-
-
-cat[0].jump();
-
-
     }
 
 
