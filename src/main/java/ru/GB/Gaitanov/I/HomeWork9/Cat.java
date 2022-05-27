@@ -1,26 +1,40 @@
 package ru.GB.Gaitanov.I.HomeWork9;
 
-public class Cat {
+public class Cat implements Activity {
 
+    private static int run;
+    private static int jump;
     private String name;
-    private int run;
-    private int jump;
 
+    @Override
+    public void run(int length) {
+
+    }
+
+    @Override
+    public void jump(int height) {
+
+    }
 
     public Cat(String name, int run, int jump) {
+
         this.name = name;
         this.run = run;
         this.jump = jump;
-
-
     }
 
-    public int getRun() {
+
+    public static int getRun() {
         return run;
+
     }
 
-    public void setRun(int run) {
-        this.run = run;
+    public static int getJump() {
+        return jump;
+    }
+
+    public void setJump(int jump) {
+        this.jump = jump;
     }
 
     public String getName() {
@@ -31,12 +45,19 @@ public class Cat {
         this.name = name;
     }
 
-    public int getJump() {
-        return jump;
+    static void checkRun() {
+        if (Cat.getRun() >= Treadmill.length)
+            System.out.println("Пробежал " + run + " " + Treadmill.length);
+        else
+            System.out.println("Не пробежал " + run + " " + Treadmill.length);
     }
 
-    public void setJump(int jump) {
-        this.jump = jump;
+    static void checkJump() {
+        if (Cat.getJump() >= Wall.height)
+            System.out.println("Перепрыгнул " + jump + " " + Wall.height);
+        else
+            System.out.println("Не перепрыгнул " + jump + " " + Wall.height);
+
     }
 }
 
