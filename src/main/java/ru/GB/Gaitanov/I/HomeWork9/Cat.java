@@ -1,27 +1,28 @@
 package ru.GB.Gaitanov.I.HomeWork9;
 
-public class Cat implements Run, Jump{
+public class Cat implements Run, Jump {
 
     private final String name;
     private final int checkRun;
     private final int checkJump;
 
 
+
     public Cat(String name, int checkRun, int checkJump) {
         this.name = name;
         this.checkRun = checkRun;
         this.checkJump = checkJump;
+
     }
 
-    public void run() {
-       // if (checkRun);
+   /* public void run() {
 
-        System.out.println("Кот прыгнул");
-    }
+           // if (checkRun <= ())
+                System.out.println("Кот прыгнул");
+            else
 
-    public void jump() {
-        System.out.println("Кот прыгнул");
-    }
+        System.out.println("Кот не прыгнул");
+    }*/
 
     public int getCheckJump() {
         return checkJump;
@@ -33,6 +34,14 @@ public class Cat implements Run, Jump{
 
     public String getName() {
         return name;
+    }
+
+    @Override
+    public void run() {
+    }
+
+    public void jump() {
+        System.out.println("Кот прыгнул");
     }
 }
 
