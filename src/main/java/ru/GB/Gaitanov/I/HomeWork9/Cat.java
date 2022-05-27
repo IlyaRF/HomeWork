@@ -1,6 +1,6 @@
 package ru.GB.Gaitanov.I.HomeWork9;
 
-public class Cat {
+public class Cat implements Run, Jump{
 
     String name;
     int run;
@@ -13,11 +13,11 @@ public class Cat {
         this.jump = jump;
     }
 
-    public void run(int param) {
+    public void run(int r) {
 
     }
 
-    public void jump(int param) {
+    public void jump(int j) {
 
     }
 }

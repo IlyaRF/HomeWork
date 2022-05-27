@@ -1,6 +1,6 @@
 package ru.GB.Gaitanov.I.HomeWork9;
 
-public class Human {
+public class Human implements Run, Jump{
 
     String name;
     int run;

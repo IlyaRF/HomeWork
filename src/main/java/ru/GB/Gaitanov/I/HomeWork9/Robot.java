@@ -1,6 +1,6 @@
 package ru.GB.Gaitanov.I.HomeWork9;
 
-public class Robot {
+public class Robot implements Run, Jump{
 
     String name;
     int run;
