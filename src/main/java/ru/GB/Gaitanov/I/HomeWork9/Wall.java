@@ -2,11 +2,14 @@ package ru.GB.Gaitanov.I.HomeWork9;
 
 public class Wall {
 
-    private final Jump jump;
+    private int height = 10;
 
 
-    public Wall(Jump jump) {
-        this.jump = jump;
+    public int getHeight() {
+        return height;
+    }
 
+    public void setHeight(int height) {
+        this.height = height;
     }
 }

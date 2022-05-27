@@ -13,11 +13,11 @@ public class Human implements Run, Jump{
         this.checkJump = checkJump;
     }
 
-    public void run(int r) {
+    public void run() {
 
     }
 
-    public void jump(int j) {
+    public void jump() {
 
     }
 }

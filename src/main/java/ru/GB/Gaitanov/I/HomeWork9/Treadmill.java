@@ -3,12 +3,15 @@ package ru.GB.Gaitanov.I.HomeWork9;
 
 public class Treadmill {
 
-    private final Run run;
+    private int length = 10;
 
 
-    public Treadmill(Run run) {
-        this.run = run;
-
+    public int getLength() {
+        return length;
     }
 
+    public void setLength(int length) {
+        this.length = length;
+    }
 }
+
