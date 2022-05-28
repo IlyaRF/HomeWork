@@ -5,45 +5,27 @@ public class Main {
     public static void main(String[] args) {
 
 
+        Obstacles[] obstacles = new Obstacles[6];
 
-        Cat[] cat = new Cat[3];
+        obstacles[0] = new Treadmill(6);
+        obstacles[1] = new Treadmill(7);
+        obstacles[2] = new Treadmill(8);
+        obstacles[3] = new Wall(6);
+        obstacles[4] = new Wall(7);
+        obstacles[5] = new Wall(8);
 
-        cat[0] = new Cat(20, 8);
-        cat[1] = new Cat(20, 13);
-        cat[2] = new Cat(9, 16);
-
-
-        Human[] human = new Human[3];
-
-        human[0] = new Human(8, 4);
-        human[1] = new Human(9, 9);
-        human[2] = new Human(8, 11);
-
-        Robot[] robot = new Robot[3];
-
-        robot[0] = new Robot(12, 5);
-        robot[1] = new Robot(20, 9);
-        robot[2] = new Robot(50, 20);
-
-        Treadmill[] treadmill = new Treadmill[3];
-
-        treadmill[0] = new Treadmill(6);
-        treadmill[1] = new Treadmill(7);
-        treadmill[2] = new Treadmill(8);
-
-        Wall[] wall = new Wall[3];
-
-        wall[0] = new Wall(6);
-        wall[1] = new Wall(7);
-        wall[2] = new Wall(8);
-
-
-
-        cat[2].checkRun();
-        cat[2].checkJump();
+        Participant[] participants = new Participant[9];
+        participants[0] = new Cat(8, 10);
+        participants[1] = new Cat(9, 9);
+        participants[2] = new Cat(10, 11);
+        participants[3] = new Human(10, 10);
+        participants[4] = new Human(9, 8);
+        participants[5] = new Human(8, 11);
+        participants[6] = new Robot(10, 12);
+        participants[7] = new Robot(5, 7);
+        participants[8] = new Robot(3, 9);
 
     }
-
-
 }
+
 

@@ -1,7 +1,5 @@
 package ru.GB.Gaitanov.I.HomeWork6;
 
-import ru.GB.Gaitanov.I.HomeWork5.Employee;
-
 public class HomeWork extends Animal {
 
     public HomeWork(String name, int swim, int run) {

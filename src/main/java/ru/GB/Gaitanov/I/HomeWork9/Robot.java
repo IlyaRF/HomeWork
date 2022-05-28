@@ -1,6 +1,6 @@
 package ru.GB.Gaitanov.I.HomeWork9;
 
-public class Robot{
+public class Robot implements Activity, Participant{
 
     private int run;
     private int jump;
@@ -27,5 +27,15 @@ public class Robot{
 
     public void setJump(int jump) {
         this.jump = jump;
+    }
+
+    @Override
+    public void run(int lengthRun) {
+
+    }
+
+    @Override
+    public void jump(int height) {
+
     }
 }
