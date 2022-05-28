@@ -3,7 +3,7 @@ package ru.GB.Gaitanov.I.HomeWork9;
 
 public class Treadmill implements Obstacles{
 
-    public static int length;
+    public static int length = 10;
 
 
     public int getLength() {

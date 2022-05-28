@@ -2,7 +2,7 @@ package ru.GB.Gaitanov.I.HomeWork9;
 
 public class Wall implements Obstacles{
 
-    public static int height;
+    public static int height = 10;
 
 
 
