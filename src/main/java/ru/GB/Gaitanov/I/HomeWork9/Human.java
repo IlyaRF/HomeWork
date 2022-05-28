@@ -31,4 +31,9 @@ public class Human implements Activity, Participant {
     public void jump(int height) {
 
     }
+
+    @Override
+    public int setRun(int run) {
+        return 0;
+    }
 }

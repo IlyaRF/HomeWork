@@ -8,10 +8,9 @@ public interface Activity {
 
     void jump (int height);
 
-    
 
-
-    }
+    int setRun(int run);
+}
 
 
 

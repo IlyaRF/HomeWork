@@ -1,5 +1,6 @@
 package ru.GB.Gaitanov.I.HomeWork9;
 
+
 public class Main {
 
     public static void main(String[] args) {
@@ -25,7 +26,6 @@ public class Main {
         participants[7] = new Robot(5, 7);
         participants[8] = new Robot(3, 9);
 
-        Participant.checkRun(8);
 }
 
     }

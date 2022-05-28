@@ -1,18 +1,10 @@
 package ru.GB.Gaitanov.I.HomeWork9;
 
-public class Cat extends Animal implements Activity, Participant {
+public class Cat implements Activity, Participant {
 
-    private String name;
+    private final String name;
     private final int run;
     private final int jump;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
 
     @Override
@@ -25,9 +17,15 @@ public class Cat extends Animal implements Activity, Participant {
 
     }
 
-    public Cat(String name, int run, int jump) {
+    @Override
+    public int setRun(int run) {
+        return 0;
+    }
 
+    public Cat(String name, int run, int jump) {
         this.run = run;
+
+
         this.jump = jump;
         this.name = name;
     }
@@ -37,19 +35,18 @@ public class Cat extends Animal implements Activity, Participant {
         return run;
 
     }
-
-    static void checkRun(int run) {
-        if (run >= Treadmill.length)
-            System.out.println("Пробежал " + run + " " + Treadmill.length);
+    public void checkRun() {
+        if (getRun() >= Treadmill.length)
+            System.out.println("Пробежал " + getRun() + " " + Treadmill.length);
         else
-            System.out.println("Не пробежал " + run + " " + Treadmill.length);
+            System.out.println("Не пробежал " + getRun()+ " " + Treadmill.length);
     }
 
-    static void checkJump(int jump) {
-        if (jump >= Wall.height)
-            System.out.println("Перепрыгнул " + jump + " " + Wall.height);
+    void checkJump(int jump) {
+        if (getJump() >= Wall.height)
+            System.out.println("Перепрыгнул " + getJump() + " " + Wall.height);
         else
-            System.out.println("Не перепрыгнул " + jump + " " + Wall.height);
+            System.out.println("Не перепрыгнул " + getJump() + " " + Wall.height);
 
     }
     public int getJump() {
