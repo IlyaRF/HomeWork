@@ -4,7 +4,7 @@ public class Cat implements Activity {
 
     private static int run;
     private static int jump;
-    private String name;
+
 
     @Override
     public void run(int length) {
@@ -16,9 +16,8 @@ public class Cat implements Activity {
 
     }
 
-    public Cat(String name, int run, int jump) {
+    public Cat(int run, int jump) {
 
-        this.name = name;
         this.run = run;
         this.jump = jump;
     }
@@ -35,14 +34,7 @@ public class Cat implements Activity {
 
     public void setJump(int jump) {
         this.jump = jump;
-    }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     static void checkRun() {

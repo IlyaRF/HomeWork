@@ -2,23 +2,14 @@ package ru.GB.Gaitanov.I.HomeWork9;
 
 public class Human {
 
-    private String name;
     private int run;
     private int jump;
 
 
-    public Human(String name, int run, int jump) {
-        this.name = name;
+    public Human(int run, int jump) {
+
         this.run = run;
         this.jump = jump;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getRun() {
