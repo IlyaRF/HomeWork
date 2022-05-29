@@ -28,15 +28,15 @@ public class Main {
         };
 
 
-        Cat cat1 = new Cat();
-        Cat cat2 = new Cat();
-        Cat cat3 = new Cat();
-        Human human1 = new Human();
-        Human human2 = new Human();
-        Human human3 = new Human();
-        Robot robot1 = new Robot();
-        Robot robot2 = new Robot();
-        Robot robot3 = new Robot();
+        Cat cat1 = new Cat("murzik");
+        Cat cat2 = new Cat("snezhok");
+        Cat cat3 = new Cat("vasya");
+        Human human1 = new Human("Vasya");
+        Human human2 = new Human("Sanya");
+        Human human3 = new Human("Sema");
+        Robot robot1 = new Robot("T-800", 10, 10);
+        Robot robot2 = new Robot("T-100", 15, 15);
+        Robot robot3 = new Robot("TX", 20, 20);
 
         Activity[] participants = {
                 cat1,
@@ -52,7 +52,6 @@ public class Main {
 
         comp.competition(participants, obstacles);
     }
-
 
 
 }

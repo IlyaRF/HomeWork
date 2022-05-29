@@ -1,13 +1,24 @@
 package ru.GB.Gaitanov.I.secondquarter.HomeWork1;
 
+import java.util.Queue;
+
 public class Cat implements Activity, Participant {
 
-    private static int maxRun = 10;
-    private static int maxJump = 9;
+        private static final int maxRun = 9;
+    private static final int maxJump = 9;
+    private String name;
 
 
-    public Cat() {
+    public Cat(String name) {
+        this.name = name;
+    }
 
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getRun() {
@@ -33,20 +44,20 @@ public class Cat implements Activity, Participant {
     @Override
     public boolean checkRun(int run) {
         if (maxRun >= run) {
-            System.out.println("Пробежал");
+            System.out.println(name + " пробежал");
             return true;
         } else {
-            System.out.println("Не пробежал");
+            System.out.println(name + " не пробежал");
             return false;
         }
     }
     @Override
     public boolean checkJump(int jump) {
         if (maxJump >= jump) {
-            System.out.println("Перепрыгнул" );
+            System.out.println(name + " перепрыгнул" );
             return true;
         } else {
-            System.out.println("Не перепрыгнул");
+            System.out.println(name + " не перепрыгнул");
             return false;
         }
     }

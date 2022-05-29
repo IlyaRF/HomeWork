@@ -2,12 +2,17 @@ package ru.GB.Gaitanov.I.secondquarter.HomeWork1;
 
 public class Robot implements Participant, Activity {
 
-    private static int maxRun = 15;
-    private static int maxJump = 15;
+    private static int maxRun;
+    private static int maxJump;
+    private String name;
 
 
-    public Robot() {
+    public Robot(String name, int maxJump, int maxRun) {
+        this.name = name;
+    }
 
+    public String getName() {
+        return this.name;
     }
 
     public int getRun() {
@@ -41,20 +46,20 @@ public class Robot implements Participant, Activity {
     @Override
     public boolean checkRun(int run) {
         if (maxRun >= run) {
-            System.out.println("Пробежал");
+            System.out.println(name + " пробежал");
             return true;
         } else {
-            System.out.println("Не пробежал");
+            System.out.println(name + " не пробежал");
             return false;
         }
     }
     @Override
     public boolean checkJump(int jump) {
         if (maxJump >= jump) {
-            System.out.println("Перепрыгнул" );
+            System.out.println(name + " перепрыгнул" );
             return true;
         } else {
-            System.out.println("Не перепрыгнул");
+            System.out.println(name + " не перепрыгнул");
             return false;
         }
     }
