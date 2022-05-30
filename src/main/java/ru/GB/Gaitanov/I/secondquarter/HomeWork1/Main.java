@@ -28,12 +28,12 @@ public class Main {
         };
 
 
-        Cat cat1 = new Cat("murzik");
-        Cat cat2 = new Cat("snezhok");
-        Cat cat3 = new Cat("vasya");
-        Human human1 = new Human("Vasya");
-        Human human2 = new Human("Sanya");
-        Human human3 = new Human("Sema");
+        Cat cat1 = new Cat("murzik", 10, 10);
+        Cat cat2 = new Cat("snezhok", 10, 10);
+        Cat cat3 = new Cat("vasya", 10, 10);
+        Human human1 = new Human("Vasya", 10, 10);
+        Human human2 = new Human("Sanya", 10, 10);
+        Human human3 = new Human("Sema", 10, 10);
         Robot robot1 = new Robot("T-800", 10, 10);
         Robot robot2 = new Robot("T-100", 15, 15);
         Robot robot3 = new Robot("TX", 20, 20);

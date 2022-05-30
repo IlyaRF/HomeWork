@@ -8,8 +8,14 @@ public interface Activity {
 
     void jump (int height);
 
-    public boolean checkRun(int run);
-    public boolean checkJump(int jump);
+    static void length(int a) {
+      int length = Treadmill.length;
+    }
+    boolean checkRun(int a);
+
+    int setRun(int run);
+
+    boolean checkJump(int jump);
 
     }
 

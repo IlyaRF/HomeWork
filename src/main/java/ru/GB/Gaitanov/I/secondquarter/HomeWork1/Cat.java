@@ -1,67 +1,66 @@
 package ru.GB.Gaitanov.I.secondquarter.HomeWork1;
 
-import java.util.Queue;
-
 public class Cat implements Activity, Participant {
 
-        private static final int maxRun = 9;
-    private static final int maxJump = 9;
-    private String name;
+    private final String name;
+    private final int run;
+    private final int jump;
 
-
-    public Cat(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getRun() {
-        return maxRun;
-
-    }
-
-    public int getJump() {
-        return maxJump;
-
-    }
 
     @Override
-    public void run(int lengthRun) {
+    public void run(int length) {
 
     }
 
     @Override
     public void jump(int height) {
 
+    }
+
+    @Override
+    public boolean checkRun(int a) {
+        return false;
+    }
+
+    @Override
+    public int setRun(int run) {
+        return 0;
+    }
+
+    public Cat(String name, int run, int jump) {
+        this.run = run;
+
+
+        this.jump = jump;
+        this.name = name;
+    }
+
+
+    public int getRun() {
+        return run;
 
     }
-    @Override
-    public boolean checkRun(int run) {
-        if (maxRun >= run) {
-            System.out.println(name + " пробежал");
-            return true;
-        } else {
-            System.out.println(name + " не пробежал");
-            return false;
-        }
+    public void checkRun() {
+        if (getRun() >= Treadmill.length)
+            System.out.println("Пробежал " + getRun() + " " + Treadmill.length);
+        else
+            System.out.println("Не пробежал " + getRun()+ " " + Treadmill.length);
     }
-    @Override
+
     public boolean checkJump(int jump) {
-        if (maxJump >= jump) {
-            System.out.println(name + " перепрыгнул" );
-            return true;
-        } else {
-            System.out.println(name + " не перепрыгнул");
-            return false;
-        }
+        if (getJump() >= Wall.height)
+            System.out.println("Перепрыгнул " + getJump() + " " + Wall.height);
+        else
+            System.out.println("Не перепрыгнул " + getJump() + " " + Wall.height);
+
+        return false;
+    }
+    public int getJump() {
+        return jump;
+
     }
 }
+
 
 
 

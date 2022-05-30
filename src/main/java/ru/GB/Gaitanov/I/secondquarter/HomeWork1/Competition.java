@@ -2,6 +2,7 @@ package ru.GB.Gaitanov.I.secondquarter.HomeWork1;
 
 public class Competition {
 
+
     public void competition(Activity[] participants, Obstacles[] obstacles) {
         boolean isParticipantFail = true;
         for (int i = 0; i < participants.length; i++) {

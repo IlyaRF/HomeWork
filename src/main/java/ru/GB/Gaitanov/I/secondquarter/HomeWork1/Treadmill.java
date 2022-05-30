@@ -1,12 +1,12 @@
 package ru.GB.Gaitanov.I.secondquarter.HomeWork1;
 
 
-public class Treadmill implements Obstacles{
+public class Treadmill implements Obstacles {
 
     public static int length;
 
 
-    public int getLength() {
+    public static int getLength() {
         return length;
     }
 

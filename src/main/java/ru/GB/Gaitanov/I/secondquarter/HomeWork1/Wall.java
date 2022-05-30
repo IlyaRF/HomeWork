@@ -5,12 +5,11 @@ public class Wall implements Obstacles {
     public static int height;
 
 
-    public int getHeight() {
+    public static int getHeight() {
         return height;
     }
 
     public Wall(int height) {
-
         this.height = height;
 
     }

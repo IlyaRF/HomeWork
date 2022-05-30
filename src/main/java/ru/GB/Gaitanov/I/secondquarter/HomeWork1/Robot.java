@@ -9,10 +9,7 @@ public class Robot implements Participant, Activity {
 
     public Robot(String name, int maxJump, int maxRun) {
         this.name = name;
-    }
 
-    public String getName() {
-        return this.name;
     }
 
     public int getRun() {
@@ -23,6 +20,10 @@ public class Robot implements Participant, Activity {
     public int getJump() {
         return maxJump;
 
+    }
+
+    public String getName() {
+        return this.name;
     }
 
     @Override
@@ -43,9 +44,9 @@ public class Robot implements Participant, Activity {
     public void setJump(int maxJump) {
         this.maxJump = maxJump;
     }
-    @Override
-    public boolean checkRun(int run) {
-        if (maxRun >= run) {
+   // @Override
+    public boolean checkRun(int length) {
+        if (maxRun >= length) {
             System.out.println(name + " пробежал");
             return true;
         } else {
@@ -53,7 +54,7 @@ public class Robot implements Participant, Activity {
             return false;
         }
     }
-    @Override
+   // @Override
     public boolean checkJump(int jump) {
         if (maxJump >= jump) {
             System.out.println(name + " перепрыгнул" );

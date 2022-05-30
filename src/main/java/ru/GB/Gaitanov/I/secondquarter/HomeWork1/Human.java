@@ -10,6 +10,10 @@ public class Human implements Activity, Participant {
         this.name = name;
     }
 
+    public Human(String name, int maxRun, int maxJump) {
+
+    }
+
     public int getRun() {
         return maxRun;
     }
@@ -35,14 +39,19 @@ public class Human implements Activity, Participant {
     }
 
     @Override
-    public boolean checkRun(int run) {
-        if (maxRun >= run) {
+    public boolean checkRun(int length) {
+        if (maxRun >= length) {
             System.out.println(name + " пробежал");
             return true;
         } else {
             System.out.println(name + " не пробежал");
             return false;
         }
+    }
+
+    @Override
+    public int setRun(int run) {
+        return 0;
     }
 
     @Override
