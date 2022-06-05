@@ -2,7 +2,6 @@ package ru.GB.Gaitanov.I.secondquarter.HomeWork3;
 
 import java.util.*;
 
-
 public class Phonebook {
     static HashMap<String, String> phonebook = new HashMap<>();
 
@@ -37,5 +36,3 @@ public class Phonebook {
         }
     }
 }
-
-
