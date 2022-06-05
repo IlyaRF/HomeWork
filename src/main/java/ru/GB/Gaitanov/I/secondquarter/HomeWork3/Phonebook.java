@@ -11,8 +11,10 @@ public class Phonebook {
         add("Ivanov", "8947646021");
         add("Smirnov", "8999906022");
         add("Sidorov", "8999945023");
+        add("Sidorov", "8999943502");
         get("Ivanov");
         get("Smirnov");
+        get("Sidorov");
         get("dsdsd");
 
     }
