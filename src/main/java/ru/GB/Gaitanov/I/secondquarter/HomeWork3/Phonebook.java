@@ -7,28 +7,26 @@ public class Phonebook {
 
     public static void main(String[] args) {
 
-        add("Ivanov", "8947646021");
-        add("Smirnov", "8999906022");
-        add("Sidorov", "8999945023");
-        add("Sidorov", "8999943502");
-        get("Ivanov");
+        add("8947646021", "Ivanov");
+        add("8999906022", "Smirnov");
+        add("8999945023", "Sidorov");
+        add("8999943502", "Sidorov");
         get("Smirnov");
         get("Sidorov");
         get("dsdsd");
 
     }
 
-    public static void add(String surname, String number) {
-        phonebook.put(surname, number);
+    public static void add(String number, String surname) {
+        phonebook.put(number, surname);
 
     }
-
-    public static void get(String surname) {
-        if (phonebook.containsKey(surname)) {
+    public static void get(String surname){
+        if(phonebook.containsValue(surname)) {
             Set<Map.Entry<String, String>> set = phonebook.entrySet();
             for (Map.Entry<String, String> temp : set) {
-                if (temp.getKey().equals(surname)) {
-                    System.out.println(temp.getKey() + " : " + temp.getValue());
+                if(temp.getValue().equals(surname)) {
+                    System.out.println(temp.getValue() + " : " + temp.getKey());
                 }
             }
         } else {
