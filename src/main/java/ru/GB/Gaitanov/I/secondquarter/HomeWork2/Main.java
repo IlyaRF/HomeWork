@@ -46,8 +46,8 @@ public class Main {
     private static class MyArraySizeException extends Exception {
     }
     private static class MyArrayDataException extends Exception {
-        public int i;
-        public int j;
+        private final int i;
+        private final int j;
 
         MyArrayDataException(int i, int j) {
             this.i = i;
