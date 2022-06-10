@@ -4,7 +4,6 @@ package ru.GB.Gaitanov.I.secondquarter.HomeWork2;
 public class Main {
 
 
-
     public static void main(String[] args) {
 
         String[][] number = new String[][]{{"1", "2", "3", "4", }, {"5", "6", "7", "8"}, {"9", "0", "9", "8"}, {"7", "6", "5", "4"}};
@@ -22,7 +21,7 @@ public class Main {
         }
     }
 
-    public static int check(String[][] arr) throws MyArraySizeException, MyArrayDataException {
+    private static int check(String[][] arr) throws MyArraySizeException, MyArrayDataException {
         int count = 0;
         if (arr.length != 4) {
             throw new MyArraySizeException();
@@ -46,8 +45,8 @@ public class Main {
     private static class MyArraySizeException extends Exception {
     }
     private static class MyArrayDataException extends Exception {
-        public int i;
-        public int j;
+        private final int i;
+        private final int j;
 
         MyArrayDataException(int i, int j) {
             this.i = i;
