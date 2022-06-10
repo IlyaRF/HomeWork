@@ -1,6 +1,9 @@
 package ru.GB.Gaitanov.I.secondquarter.HomeWork6;
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -53,5 +56,54 @@ public class EchoClient extends JFrame {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        try {
+            out.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            socket.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void sendMessage() {
+        if (!msgInputField.getText().trim().isEmpty()) {
+            try {
+                out.writeUTF(msgInputField.getText());
+                msgInputField.setText("");
+                msgInputField.grabFocus();
+            } catch (IOException e) {
+                e.printStackTrace();
+                JOptionPane.showMessageDialog(null, "Ошибка отправки сообщения");
+            }
+        }
+    }
+
+    public void prepareGUI() {
+// Параметры окна
+        setBounds(600, 300, 500, 500);
+        setTitle("Клиент");
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+// Текстовое поле для вывода сообщений
+        chatArea = new JTextArea();
+        chatArea.setEditable(false);
+        chatArea.setLineWrap(true);
+        add(new JScrollPane(chatArea), BorderLayout.CENTER);
+// Нижняя панель с полем для ввода сообщений и кнопкой отправки
+//        сообщений
+        JPanel bottomPanel = new JPanel(new BorderLayout());
+        JButton btnSendMsg = new JButton("Отправить");
+        bottomPanel.add(btnSendMsg, BorderLayout.EAST);
+        msgInputField = new JTextField();
+        add(bottomPanel, BorderLayout.SOUTH);
+        bottomPanel.add(msgInputField, BorderLayout.CENTER);
+        btnSendMsg.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                sendMessage();
+            }
+        });
     }
 }
