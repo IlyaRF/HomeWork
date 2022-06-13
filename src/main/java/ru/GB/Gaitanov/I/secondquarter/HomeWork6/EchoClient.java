@@ -25,18 +25,17 @@ public class EchoClient {
         }
     }
     public void openConnection() throws IOException {
-        socket = new Socket("localhost", 8189);
+        socket = new Socket("127.0.0.1", 8189);
         in = new DataInputStream(socket.getInputStream());
         out = new DataOutputStream(socket.getOutputStream());
         new Thread(() -> {
             try {
                 while (true) {
-                    String s = in.readUTF();
-                    if (s.equalsIgnoreCase("/end")) {
+                    String message = in.readUTF();
+                    if ("/end".equalsIgnoreCase(message)) {
                         break;
                     }
-                    System.out.println("Сообщение от сервера " + s);
-                    System.out.println("\n");
+                    System.out.println("Сообщение от сервера " + message);
                 }
             } catch (Exception e) {
                 e.printStackTrace();
@@ -59,18 +58,15 @@ public class EchoClient {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            if (socket != null) {
+                try {
+                    socket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
-
-    public void sendMessage(String message) {
-        try {
-            out.writeUTF(message);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-
     private void start() {
         try {
             openConnection();
@@ -81,7 +77,12 @@ public class EchoClient {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    public void sendMessage(String message) {
+        try {
+            out.writeUTF(message);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-
-
+    }
 }
