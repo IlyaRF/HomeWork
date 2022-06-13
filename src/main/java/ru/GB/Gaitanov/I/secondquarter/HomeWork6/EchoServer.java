@@ -16,14 +16,14 @@ public class EchoServer {
              DataInputStream in = new DataInputStream(socket.getInputStream());
             DataOutputStream out = new DataOutputStream(socket.getOutputStream());
             while (true) {
-                String s = in.readUTF();
-                out.writeUTF(s);
-                if ("/end".equalsIgnoreCase(s)) {
+                String message = in.readUTF();
+                out.writeUTF(message);
+                if ("/end".equalsIgnoreCase(message)) {
                     out.writeUTF("/end");
                     break;
                 }
-                System.out.println("Сообщение от клиента" + s);
-                out.writeUTF(s);
+                System.out.println("Сообщение от клиента" + message);
+                out.writeUTF(message);
             }
         } catch (IOException e) {
             e.printStackTrace();

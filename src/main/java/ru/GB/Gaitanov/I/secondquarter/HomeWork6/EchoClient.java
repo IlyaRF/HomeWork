@@ -11,6 +11,12 @@ public class EchoClient {
     private DataInputStream in;
     private DataOutputStream out;
 
+
+
+    public static void main(String[] args) throws IOException {
+        new EchoClient().start();
+    }
+
     public EchoClient() {
         try {
             openConnection();
@@ -55,29 +61,27 @@ public class EchoClient {
             }
         }
     }
-    public void sendMessage(String s) {
+
+    public void sendMessage(String message) {
         try {
-            out.writeUTF(s);
+            out.writeUTF(message);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
 
-    private void start()  {
+    private void start() {
         try {
             openConnection();
+            Scanner scanner = new Scanner(System.in);
+            while (true) {
+                sendMessage(scanner.nextLine());
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
-        Scanner scanner = new Scanner(System.in);
-        while (true) {
-            sendMessage(scanner.nextLine());
         }
 
-    }
 
-    public static void main(String[] args) throws IOException {
-        new EchoClient().start();
-    }
 }
