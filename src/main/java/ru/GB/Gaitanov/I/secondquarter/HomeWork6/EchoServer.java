@@ -8,7 +8,7 @@ import java.net.Socket;
 
 public class EchoServer {
     public static void main(String[] args) {
-        Socket socket = null;
+        Socket socket;
         try (ServerSocket serverSocket = new ServerSocket(8189)) {
             System.out.println("Сервер запущен, ожидаем подключения...");
             socket = serverSocket.accept();
@@ -16,13 +16,14 @@ public class EchoServer {
              DataInputStream in = new DataInputStream(socket.getInputStream());
             DataOutputStream out = new DataOutputStream(socket.getOutputStream());
             while (true) {
-                String str = in.readUTF();
-                if (str.equals("/end")) {
+                String s = in.readUTF();
+                out.writeUTF(s);
+                if ("/end".equalsIgnoreCase(s)) {
                     out.writeUTF("/end");
                     break;
                 }
-                System.out.println("Сообщение от клиента");
-                out.writeUTF("Эхо: " + str);
+                System.out.println("Сообщение от клиента" + s);
+                out.writeUTF(s);
             }
         } catch (IOException e) {
             e.printStackTrace();
