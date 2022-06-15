@@ -9,7 +9,6 @@ import java.util.Scanner;
 
 public class EchoServer {
 
-    private final Scanner scanner = new Scanner(System.in);
     private ServerSocket serverSocket;
     private Socket socket;
     private DataInputStream in;
@@ -17,6 +16,7 @@ public class EchoServer {
 
     public EchoServer() {
         try {
+            Scanner scanner = new Scanner(System.in);
             serverSocket = new ServerSocket(8189);
             System.out.println("Ожидается подключение");
             socket = serverSocket.accept();
@@ -36,7 +36,7 @@ public class EchoServer {
                     clientMessage("/end");
                     break;
                 }
-                System.out.println("Client: " + text);
+                System.out.println("Клиент: " + text);
             }
         } catch (IOException e) {
             e.printStackTrace();

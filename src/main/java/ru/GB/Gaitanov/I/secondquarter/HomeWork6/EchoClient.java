@@ -47,7 +47,7 @@ public class EchoClient {
                     if ("/end".equalsIgnoreCase(message)) {
                         break;
                     }
-                    System.out.println("Сообщение от сервера: " + message);
+                    System.out.println("Клиент: " + message);
                 }
             } catch (IOException e) {
                 e.printStackTrace();
