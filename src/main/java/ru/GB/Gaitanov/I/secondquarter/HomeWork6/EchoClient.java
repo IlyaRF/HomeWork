@@ -16,7 +16,7 @@ public class EchoClient {
         new EchoClient().start();
     }
 
-    private void start() {
+    protected void start() {
         try {
             openConnection();
             Scanner scanner = new Scanner(System.in);
