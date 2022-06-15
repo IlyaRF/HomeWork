@@ -45,9 +45,9 @@ public class EchoClient {
                 while (true) {
                     String message = in.readUTF();
                     if ("/end".equalsIgnoreCase(message)) {
-                        break;
+                        closeConnection();
                     }
-                    System.out.println("Клиент: " + message);
+                    System.out.println("Сервер: " + message);
                 }
             } catch (IOException e) {
                 e.printStackTrace();
