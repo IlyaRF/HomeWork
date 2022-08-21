@@ -66,27 +66,10 @@ public class MultiCore {
                 arr[i] = (float) (arr[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
             }
             splitAndMergeExample();
-        });
-        Thread thread2 = new Thread(() -> {
-            for (int i = 0; i < size / 3; i++) {
-                arr[i] = (float) (arr[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
-            }
-            System.out.println("Three thread time: " + (System.currentTimeMillis() -
-                    startTime) + " ms.");
-            splitAndMergeExample();
-        });
-        Thread thread3 = new Thread(() -> {
-            for (int i = 0; i < size / 3; i++) {
-                arr[i] = (float) (arr[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
-            }
-            splitAndMergeExample();
+
         });
         thread1.start();
-        thread2.start();
-        thread3.start();
         thread1.join();
-        thread2.join();
-        thread3.join();
 
     }
         public static void threadsFour() throws InterruptedException {
