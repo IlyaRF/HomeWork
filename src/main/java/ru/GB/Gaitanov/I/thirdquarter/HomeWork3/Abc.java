@@ -3,7 +3,7 @@ package ru.GB.Gaitanov.I.thirdquarter.HomeWork3;
 
 public class Abc {
 
-    public synchronized void ThreadA() {
+    public synchronized void threadA() {
         System.out.println("A");
         try {
             wait();
@@ -14,7 +14,7 @@ public class Abc {
     }
 
 
-    public void ThreadB() {
+    public synchronized void threadB() {
         System.out.println("B");
         try {
             wait();
@@ -24,7 +24,7 @@ public class Abc {
         notify();
     }
 
-    public void ThreadC() {
+    public synchronized void threadC() {
 
         System.out.println("C");
         try {
@@ -42,19 +42,19 @@ public class Abc {
 
             new Thread(() -> {
                 for (int i = 0; i < 5; i++) {
-                    Abc.ThreadA();
+                    Abc.threadA();
                 }
             }).start();
 
             new Thread(() -> {
                 for (int i = 0; i < 5; i++) {
-                    Abc.ThreadB();
+                    Abc.threadB();
                 }
             }).start();
 
             new Thread(() -> {
                 for (int i = 0; i < 5; i++) {
-                    Abc.ThreadC();
+                    Abc.threadC();
                 }
             }).start();
         }
