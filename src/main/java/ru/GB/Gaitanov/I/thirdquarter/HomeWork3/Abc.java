@@ -3,62 +3,60 @@ package ru.GB.Gaitanov.I.thirdquarter.HomeWork3;
 
 public class Abc {
 
-    public synchronized void threadA() {
-        System.out.println("A");
-        try {
-            wait();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        notify();
-    }
+        static final Object object = new Object();
+        static String currentLetter = "A";
 
-
-    public synchronized void threadB() {
-        System.out.println("B");
-        try {
-            wait();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        notify();
-    }
-
-    public synchronized void threadC() {
-
-        System.out.println("C");
-        try {
-            wait();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        notify();
-    }
-}
-
-    class ABCStart {
         public static void main(String[] args) {
-            Abc text = new Abc();
-
             new Thread(() -> {
-                for (int i = 0; i < 5; i++) {
-                    Abc.threadA();
+                try {
+                    for (int i = 0; i < 5; i++) {
+                        synchronized (object) {
+                            while (!currentLetter.equals("A")) {
+                                object.wait();
+                            }
+                            System.out.print(currentLetter);
+                            currentLetter = "B";
+                            object.notifyAll();
+                        }
+                    }
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
             }).start();
 
             new Thread(() -> {
-                for (int i = 0; i < 5; i++) {
-                    Abc.threadB();
+                try {
+                    for (int i = 0; i < 5; i++) {
+                        synchronized (object) {
+                            while (!currentLetter.equals("B")) {
+                                object.wait();
+                            }
+                            System.out.print(currentLetter);
+                            currentLetter = "C";
+                            object.notifyAll();
+                        }
+                    }
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
             }).start();
 
             new Thread(() -> {
-                for (int i = 0; i < 5; i++) {
-                    Abc.threadC();
+                try {
+                    for (int i = 0; i < 5; i++) {
+                        synchronized (object) {
+                            while (!currentLetter.equals("C")) {
+                                object.wait();
+                            }
+                            System.out.print(currentLetter);
+                            currentLetter = "A";
+                            object.notifyAll();
+                        }
+                    }
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
             }).start();
         }
     }
-
-
 
