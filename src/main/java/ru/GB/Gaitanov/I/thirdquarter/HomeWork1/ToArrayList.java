@@ -16,5 +16,4 @@ public class ToArrayList {
             System.out.print(" " + str);
 
     }
-
 }
